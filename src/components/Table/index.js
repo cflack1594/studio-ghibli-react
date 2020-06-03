@@ -1,14 +1,18 @@
 import React from "react";
 import { TableHeader } from "./TableHeader";
-import { TableRow } from "./TableRow";
+import { TableBody } from "./TableBody";
 
 export class Table extends React.Component {
   render() {
     return (
-      <div>
-        <TableHeader />
-        <TableRow />
-      </div>
+      <table>
+        <thead>
+          <TableHeader />
+        </thead>
+        <tbody>
+          <TableBody />
+        </tbody>
+      </table>
     );
   }
 }
