@@ -5,14 +5,18 @@ import { Table } from "./Table";
 
 export class ControlledTable extends React.Component {
   static propTypes = {
-    dataToDisplay: PropTypes.array,
+    dataToDisplay: PropTypes.object,
     dataKeys: PropTypes.object,
+    updateData: PropTypes.func,
   };
 
   render() {
     return (
       <Fragment>
-        <Controls dataKeys={this.props.dataKeys} />
+        <Controls
+          dataKeys={this.props.dataKeys}
+          updateData={this.props.updateData}
+        />
         <Table data={this.props.dataToDisplay} />
       </Fragment>
     );
