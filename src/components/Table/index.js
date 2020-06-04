@@ -4,8 +4,8 @@ import { TableBody } from "./TableBody";
 import PropTypes from "prop-types";
 export class Table extends React.Component {
   static propTypes = {
-    activeDataKeys: PropTypes.object,
-    data: PropTypes.array,
+    activeDataKeys: PropTypes.array,
+    activeData: PropTypes.array,
   };
 
   render() {
@@ -15,7 +15,10 @@ export class Table extends React.Component {
           <TableHeader headers={this.props.activeDataKeys} />
         </thead>
         <tbody>
-          <TableBody data={this.props.data} />
+          <TableBody
+            activeData={this.props.activeData}
+            activeDataKeys={this.props.activeDataKeys}
+          />
         </tbody>
       </table>
     );

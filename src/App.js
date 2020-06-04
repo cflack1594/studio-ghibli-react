@@ -39,7 +39,7 @@ export class App extends React.Component {
     return (
       <div className="App">
         <ControlledTable
-          dataToDisplay={this.state.activeData}
+          activeData={this.state.activeData}
           dataKeys={this.state.dataKeys}
           updateData={this.updateActiveData}
           activeKey={this.state.activeDataKey}

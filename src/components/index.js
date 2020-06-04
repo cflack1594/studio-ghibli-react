@@ -6,7 +6,7 @@ import { Table } from "./Table";
 export class ControlledTable extends React.Component {
   static propTypes = {
     activeKey: PropTypes.string,
-    dataToDisplay: PropTypes.object,
+    activeData: PropTypes.array,
     dataKeys: PropTypes.object,
     updateData: PropTypes.func,
   };
@@ -19,7 +19,7 @@ export class ControlledTable extends React.Component {
           updateData={this.props.updateData}
         />
         <Table
-          data={this.props.dataToDisplay}
+          activeData={this.props.activeData}
           activeDataKeys={this.props.dataKeys[this.props.activeKey]}
         />
       </Fragment>
