@@ -42,6 +42,7 @@ export class App extends React.Component {
           dataToDisplay={this.state.activeData}
           dataKeys={this.state.dataKeys}
           updateData={this.updateActiveData}
+          activeKey={this.state.activeDataKey}
         />
       </div>
     );
